@@ -1,0 +1,7 @@
+/* Enter your custom styles here */
+.sapMImg { 
+	border-radius: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+	/*object-fit: contain;*/
+}
