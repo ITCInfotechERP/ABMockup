@@ -2,7 +2,7 @@
 	controllerName="com.itc.alturki_ui_test.controller.CreateActivityBook" xmlns:html="http://www.w3.org/1999/xhtml">
 	<App>
 		<pages>
-			<Page title="Create Activity Book" showNavButton="true" navButtonPress="onNaviBack">
+			<Page title="Create Activity Book" showNavButton="true" navButtonPress="onNaviBack" floatingFooter="true">
 				<content></content>
 				<footer>
 					<Toolbar>

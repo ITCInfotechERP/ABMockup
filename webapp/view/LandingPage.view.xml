@@ -2,7 +2,7 @@
 	controllerName="com.itc.alturki_ui_test.controller.LandingPage">
 	<App id="app" height="" width="">
 		<pages>
-			<Page title="Landing Page" showNavButton="true" navButtonPress="onNaviBack">
+			<Page title="Landing Page" showNavButton="true" navButtonPress="onNaviBack" floatingFooter="true">
 				<content/>
 				<footer>
 					<Toolbar>
