@@ -56,6 +56,10 @@
 				"settings": {
 					"bundleName": "com.itc.alturki_ui_test.i18n.i18n"
 				}
+			},
+			"data": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Data.json"
 			}
 		},
 		"resources": {
