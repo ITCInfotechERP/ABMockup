@@ -1,0 +1,16 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="com.itc.alturki_ui_test.controller.LandingPage">
+	<App id="app" height="" width="">
+		<pages>
+			<Page title="Landing Page" showNavButton="true" navButtonPress="onNaviBack">
+				<content/>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="idCreateAB" text="Create Activity Book" visible="true" press="onCreateAB"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

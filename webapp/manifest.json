@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -31,14 +30,13 @@
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
-			"viewName": "com.itc.alturki_ui_test.view.View1",
+			"viewName": "com.itc.alturki_ui_test.view.LandingPage",
 			"type": "XML",
 			"async": true,
-			"id": "View1"
+			"id": "LandingPage"
 		},
 		"dependencies": {
 			"minUI5Version": "1.60.1",
@@ -61,9 +59,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -75,18 +75,43 @@
 				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "RouteView1",
-				"pattern": "RouteView1",
-				"target": ["TargetView1"]
-			}],
+			"routes": [
+				{
+					"name": "RouteView1",
+					"pattern": "RouteView1",
+					"target": "TargetView1"
+				},{
+					"name": "LandingPage",
+					"pattern": "",
+					"target": "LandingPage"
+				},{
+					"name": "CreateActivityBook",
+					"pattern": "CreateActivityBook",
+					"target": "CreateActivityBook"
+				},{
+					"name": "AddEmployees",
+					"pattern": "AddEmployees",
+					"target": "AddEmployees"
+				}
+			],
 			"targets": {
 				"TargetView1": {
 					"viewType": "XML",
 					"transition": "slide",
-					"clearControlAggregation": false,
 					"viewId": "View1",
 					"viewName": "View1"
+				},
+				"LandingPage": {
+					"viewType": "XML",
+					"viewName": "LandingPage"
+				},
+				"CreateActivityBook": {
+					"viewType": "XML",
+					"viewName": "CreateActivityBook"
+				},
+				"AddEmployees": {
+					"viewType": "XML",
+					"viewName": "AddEmployees"
 				}
 			}
 		}

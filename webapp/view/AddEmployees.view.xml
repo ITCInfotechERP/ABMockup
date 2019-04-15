@@ -1,0 +1,16 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.itc.alturki_ui_test.controller.AddEmployees" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Add Employees" showNavButton="true" navButtonPress="onNaviBack">
+				<content></content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="idCreateLP" text="Go To LP" visible="true" press="onGoToLP"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
