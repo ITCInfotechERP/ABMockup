@@ -1,0 +1,85 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" controllerName="com.itc.alturki_ui_test.controller.View1" displayBlock="true">
+	<tnt:ToolHeader width="auto">
+		<Button icon="sap-icon://nav-back" type="Transparent"/>
+		<Button icon="resources/altasnimlogo.png" type="Transparent"/>
+		<Text text="AL TASNIM GROUP" wrapping="false"/>
+		<ToolbarSpacer/>
+		<Button icon="resources/Employee2.jpg" type="Transparent" press="onUserNamePress">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow"/>
+			</layoutData>
+		</Button>
+	</tnt:ToolHeader>
+	<Shell id="shell">
+		<App id="app" height="" width="">
+			<pages>
+				<Page id="page" title="{i18n>title}" showHeader="false" showSubHeader="true" enableScrolling="false" floatingFooter="true">
+					<!--<content>-->
+					<Panel id="panel0" expandAnimation="false" expanded="true" height="100%" width="">
+						<headerToolbar>
+							<Toolbar id="toolbar1" style="Clear">
+								<Title text="Activity Log Sheet Header"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<Text id="text1" text="Productivity Management &gt; Activity Log Sheet Header" class="sapUiMediumMarginBottom"/>
+							<ToolbarSpacer/>
+							<Label text="Activity Date" design="Bold" width="50%" required="false" textAlign="Left" textDirection="Inherit" visible="true"/>
+							<DatePicker width="90%" displayFormat="long" enabled="true" visible="true" valueFormat="yyyyMMdd" class="sapUiMediumMarginBottom"/>
+							<HBox width="100%" id="hbox0" justifyContent="SpaceBetween" renderType="Bare">
+								<items>
+									<sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://locate-me" size="1.3em" id="icon0"/>
+									<Label text="Site" width="60%" id="label1" design="Bold" class="sapUiSmallMarginBegin"/>
+									<Label text="Description" width="100%" id="label1_1555136538269" design="Bold" textAlign="Left"/>
+								</items>
+							</HBox>
+							<HBox width="100%" id="hbox0_1555136819541" justifyContent="SpaceBetween" alignItems="Start" alignContent="Start" renderType="Bare" class="sapUiMediumMarginBottom">
+								<items>
+									<Input value="3109" id="input0" showValueHelp="true" width="60%"/>
+									<Input value="Ghala-Carpentary Work, GHALA" id="input1" editable="false" enabled="false" class="sapUiMediumMarginBegin"/>
+								</items>
+							</HBox>
+							<HBox width="100%" id="hbox1" justifyContent="Inherit" renderType="Bare">
+								<items>
+									<sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://person-placeholder" size="1.3em" id="icon1"/>
+									<Label text="Foreman ID" width="60%" id="label2" design="Bold" class="sapUiMediumMarginBottom"/>
+								</items>
+							</HBox>
+							<HBox width="100%" id="hbox1_1555136819541" justifyContent="Inherit" alignItems="Start" alignContent="Start" renderType="Bare" class="sapUiMediumMarginBottom">
+								<items>
+									<Input value="986751" id="input2" showValueHelp="true" width="36.5%"/>
+									<Button icon="/webapp/resources/Employee2.jpg" class="sapUiMediumMarginBegin" type="Transparent"/>
+									<Text text="&#13;Sunil Gupta" id="text4" class="sapUiMediumMarginBegin" maxLines="2" renderWhitespace="true"/>
+								</items>
+							</HBox>
+							<HBox width="100%" id="hbox2" justifyContent="Inherit" renderType="Bare">
+								<items>
+									<sap.ui.core:Icon xmlns:sap.ui.core="sap.ui.core" src="sap-icon://person-placeholder" size="1.3em" id="icon2"/>
+									<Label text="Engineer ID" width="60%" id="label3" design="Bold" class="sapUiSmallMarginBegin"/>
+								</items>
+							</HBox>
+							<HBox width="100%" id="hbox2_1555136819541" justifyContent="Inherit" alignItems="Start" alignContent="Start" renderType="Bare" class="sapUiMediumMarginBottom">
+								<items>
+									<Input value="765419" id="input3" showValueHelp="true" width="36.5%"/>
+									<Button icon="/webapp/resources/Employee2.jpg" class="sapUiMediumMarginBegin" type="Transparent"/>
+									<Text text="Fahmeeda N" id="text5" class="sapUiMediumMarginBegin" maxLines="2" renderWhitespace="true"/>
+								</items>
+							</HBox>
+						</content>
+					</Panel>
+					<!--</content>-->
+					<footer>
+						<OverflowToolbar width="100%" enabled="true" visible="true" style="Clear" design="Transparent">
+							<content>
+								<ToolbarSpacer width=""/>
+								<Button text="Save" type="Emphasized" iconFirst="true" width="50%" enabled="true" visible="true" iconDensityAware="false"/>
+								<ToolbarSpacer/>
+							</content>
+						</OverflowToolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
