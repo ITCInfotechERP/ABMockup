@@ -1,0 +1,20 @@
+{
+	"sample": [{
+			"title": "Home",
+			"Activity hours":10,
+			"Quality": 10,
+			"Should be PH": "P4",
+			"PI by CH":"P3",
+			"icon1": "sap-icon://edit",
+			"icon2": "sap-icon://delete"
+		},
+		{
+			"title": "Home",
+			"Activity hours":15,
+			"Quality": 15,
+			"Should be PH": "P3",
+			"PI by CH":"P5",
+			"icon1": "sap-icon://edit",
+			"icon2": "sap-icon://delete"
+		}]
+}
