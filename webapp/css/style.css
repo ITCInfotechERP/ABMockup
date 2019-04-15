@@ -5,3 +5,16 @@
 	overflow: hidden;
 	/*object-fit: contain;*/
 }
+
+.idlabel{
+	    font-size: 25px
+}
+
+.hboxalignment{
+	    margin-left: 120px;
+}
+
+.addbuttonalignment{
+	    margin-left: 15px;
+	    font-size: 15px
+}
