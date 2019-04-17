@@ -1,20 +1,48 @@
 {
 	"sample": [{
-			"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png",
-			"Activity hours":10,
-			"Quality": 10,
-			"Should be PH": "P4",
-			"PI by CH":"P3",
-			"icon1": "sap-icon://edit",
-			"icon2": "sap-icon://delete"
-		},
-		{
-			"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png",
-			"Activity hours":15,
-			"Quality": 15,
-			"Should be PH": "P3",
-			"PI by CH":"P5",
-			"icon1": "sap-icon://edit",
-			"icon2": "sap-icon://delete"
-		}]
+		"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png",
+		"Activity hours": 10,
+		"Activity": "Activity 01",
+		"Quality": 10,
+		"Should be PH": "P4",
+		"PI by CH": "P3",
+		"icon1": "sap-icon://edit",
+		"icon2": "sap-icon://delete"
+	}, {
+		"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png",
+		"Activity hours": 15,
+		"Activity": "Activity 02",
+		"Quality": 15,
+		"Should be PH": "P3",
+		"PI by CH": "P5",
+		"icon1": "sap-icon://edit",
+		"icon2": "sap-icon://delete"
+	}, {
+		"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png",
+		"Activity hours": 15,
+		"Activity": "Activity 03",
+		"Quality": 15,
+		"Should be PH": "P3",
+		"PI by CH": "P5",
+		"icon1": "sap-icon://edit",
+		"icon2": "sap-icon://delete"
+	}, {
+		"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png",
+		"Activity hours": 15,
+		"Activity": "Activity 04",
+		"Quality": 15,
+		"Should be PH": "P3",
+		"PI by CH": "P5",
+		"icon1": "sap-icon://edit",
+		"icon2": "sap-icon://delete"
+	}, {
+		"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png",
+		"Activity hours": 15,
+		"Activity": "Activity 05",
+		"Quality": 15,
+		"Should be PH": "P3",
+		"PI by CH": "P5",
+		"icon1": "sap-icon://edit",
+		"icon2": "sap-icon://delete"
+	}]
 }

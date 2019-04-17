@@ -1,20 +1,21 @@
 /* Enter your custom styles here */
-.sapMImg { 
-	border-radius: 100%;
-	vertical-align: middle;
-	overflow: hidden;
-	/*object-fit: contain;*/
+
+/*.sapMImg {*/
+/*    border-radius: 100%;*/
+/*    vertical-align: middle;*/
+/*    overflow: hidden;*/
+    /*object-fit: contain;*/
+/*}*/
+
+.tableImage {
+	border-radius : 50%;
 }
 
-.idlabel{
-	    font-size: 25px
+.AddEmployeeHeaderColor {
+    background-color: #005399;
+    color: white;
 }
 
-.hboxalignment{
-	    margin-left: 120px;
-}
-
-.addbuttonalignment{
-	    margin-left: 15px;
-	    font-size: 15px
+.AddEmployeeHeaderColor .sapUiIcon::before {
+    color: white;
 }
