@@ -4,100 +4,188 @@
 		<pages>
 			<Page title="Add Employees" showNavButton="true" navButtonPress="onNaviBack" floatingFooter="true">
 				<content>
-					<Panel width="auto" class="AddEmployeeHeaderColor">
-						<Label class="AddEmployeeHeaderColor" text="Activity Management &gt; Activity Log &gt; View Activity &gt; Activity 1"/>
-						<Toolbar class="AddEmployeeHeaderColor" width="100%" id="toolbar2" style="Clear">
-							<Label class="AddEmployeeHeaderColor" text="A-10080797 - Activity 1" design="Bold"/>
-							<ToolbarSpacer id="spacer1"/>
-							<HBox justifyContent="Center" class="AddEmployeeHeaderColor" alignItems="Center" alignContent="Center">
-								<Button class="AddEmployeeHeaderColor" icon="sap-icon://sys-add" type="Transparent"/>
-								<Label class="AddEmployeeHeaderColor" text="Add New Activity" design="Bold"/>
-							</HBox>
-							<content/>
-						</Toolbar>
-					</Panel>
-					<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
-						<items>
-							<IconTabFilter text="Activity 01">
-								<Panel>
-									<Toolbar width="100%" id="toolbar3" style="Clear">
-										<VBox>
-											<Label text="Location/Building"/>
-											<Text text="INH001"/>
-										</VBox>
+					<content>
+						<Panel width="auto" class="AddEmployeeHeaderColor">
+							<Label class="AddEmployeeHeaderColor" text="Activity Management &gt; Activity Log &gt; View Activity &gt; Activity 1"/>
+							<!--<VBox>-->
+							<!--	<Text text="Activity Management"/>-->
+							<!--	<Text text="A100A0797 - Activity 1"/>-->
+							<!--<Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmUpYYHhalvLQxph1FulRdB6yx-JLqee73jF1UM8FCE6prCve"/>-->
+							<!--</VBox>-->
+							<!--<HBox alignContent="End" alignItems="Center">-->
+							<Toolbar class="AddEmployeeHeaderColor" width="100%" id="toolbar2" style="Clear">
+								<Label class="AddEmployeeHeaderColor" text="A-10080797 - Activity 1" design="Bold"/>
+								<ToolbarSpacer id="spacer1"/>
+								<HBox justifyContent="Center" class="AddEmployeeHeaderColor" alignItems="Center" alignContent="Center">
+									<Button class="AddEmployeeHeaderColor" icon="sap-icon://sys-add" type="Transparent"/>
+									<Label class="AddEmployeeHeaderColor" text="Add New Activity" design="Bold"/>
+								</HBox>
+								<content/>
+							</Toolbar>
+							<!--<items/>-->
+							<!--</HBox>-->
+						</Panel>
+						<Carousel height="auto" id="carouselMain" pages="{data>/sample}">
+							<customLayout>
+								<CarouselLayout visiblePagesCount="4"/>
+							</customLayout>
+							<f:Card>
+								<f:header>
+									<cards:Header title="{data>Activity}"/>
+								</f:header>
+								<f:content></f:content>
+							</f:Card>
+						</Carousel>
+						<Panel>
+							<Toolbar width="100%" id="toolbar3" style="Clear">
+								<VBox>
+									<Label text="Location/Building"/>
+									<Text text="INH001"/>
+								</VBox>
+								<ToolbarSpacer/>
+								<VBox>
+									<Label text="Area" labelFor="productInput"/>
+									<Text text="A-ID3435"/>
+								</VBox>
+								<ToolbarSpacer/>
+								<VBox>
+									<Label text="Cluster" labelFor="productInput"/>
+									<Text text="INH01"/>
+								</VBox>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://edit" type="Transparent"/>
+								<Button icon="sap-icon://delete" type="Transparent"/>
+							</Toolbar>
+						</Panel>
+						<Table id="idProductsTable" inset="false" items="{data>/sample}">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Title text="Employee Details" level="H2"/>
 										<ToolbarSpacer/>
-										<VBox>
-											<Label text="Area" labelFor="productInput"/>
-											<Text text="A-ID3435"/>
-										</VBox>
-										<ToolbarSpacer/>
-										<VBox>
-											<Label text="Cluster" labelFor="productInput"/>
-											<Text text="INH01"/>
-										</VBox>
-										<ToolbarSpacer/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column>
+									<Text text="Total"/>
+								</Column>
+								<Column>
+									<Text text="Activity hours"/>
+								</Column>
+								<Column>
+									<Text text="Quality"/>
+								</Column>
+								<Column>
+									<Text text="Should be PI"/>
+								</Column>
+								<Column>
+									<Text text="PI By CH"/>
+								</Column>
+								<Column>
+									<Text text="Edit"/>
+								</Column>
+								<Column>
+									<Text text="Delete"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Image src="{data>src}" width="40%" height="5%"/>
+										<Text text="{data>Activity hours}" numberState="{= ${data>Activity hours} > 11 ? 'Error' : 'Success'}"/>
+										<Text text="{data>Quality}"/>
+										<Text text="{data>Should be PH}"/>
+										<Text text="{data>PI by CH}"/>
 										<Button icon="sap-icon://edit" type="Transparent"/>
 										<Button icon="sap-icon://delete" type="Transparent"/>
-									</Toolbar>
-								</Panel>
-								<Table id="idProductsTable" inset="false" items="{data>/sample}">
-									<headerToolbar>
-										<Toolbar>
-											<content>
-												<Title text="Employee Details" level="H2"/>
-												<ToolbarSpacer/>
-											</content>
-										</Toolbar>
-									</headerToolbar>
-									<columns>
-										<Column>
-											<Text text="Total"/>
-										</Column>
-										<Column>
-											<Text text="Activity hours"/>
-										</Column>
-										<Column>
-											<Text text="Quality"/>
-										</Column>
-										<Column>
-											<Text text="Should be PI"/>
-										</Column>
-										<Column>
-											<Text text="PI By CH"/>
-										</Column>
-										<Column>
-											<Text text="Edit"/>
-										</Column>
-										<Column>
-											<Text text="Delete"/>
-										</Column>
-									</columns>
-									<items>
-										<ColumnListItem>
-											<cells>
-												<Image src="{data>src}" width="50px" height="50px" class="tableImage"/>
-												<Text text="{data>Activity hours}"/>
-												<Text text="{data>Quality}"/>
-												<Text text="{data>Should be PH}"/>
-												<Text text="{data>PI by CH}"/>
-												<Button icon="{data>icon1}" type="Transparent"/>
-												<Button icon="{data>icon2}" type="Transparent"/>
-											</cells>
-										</ColumnListItem>
-									</items>
-								</Table>
-							</IconTabFilter>
-							<IconTabFilter text="Activity 02">
-								<Text text="Attachments go here ..."/>
-							</IconTabFilter>
-							<IconTabFilter text="Activity 03">
-								<Text text="Notes go here ..."/>
-							</IconTabFilter>
-							<IconTabFilter text="Activity 04">
-								<Text text="People content goes here ..."/>
-							</IconTabFilter>
-						</items>
-					</IconTabBar>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<!--<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">-->
+						<!--	<items>-->
+						<!--		<IconTabFilter text="Activity 01">-->
+						<!--			<Panel>-->
+						<!--				<Toolbar width="100%" id="toolbar3" style="Clear">-->
+						<!--					<VBox>-->
+						<!--						<Label text="Location/Building"/>-->
+						<!--						<Text text="INH001"/>-->
+						<!--					</VBox>-->
+						<!--					<ToolbarSpacer/>-->
+						<!--					<VBox>-->
+						<!--						<Label text="Area" labelFor="productInput"/>-->
+						<!--						<Text text="A-ID3435"/>-->
+						<!--					</VBox>-->
+						<!--					<ToolbarSpacer/>-->
+						<!--					<VBox>-->
+						<!--						<Label text="Cluster" labelFor="productInput"/>-->
+						<!--						<Text text="INH01"/>-->
+						<!--					</VBox>-->
+						<!--					<ToolbarSpacer/>-->
+						<!--					<Button icon="sap-icon://edit" type="Transparent"/>-->
+						<!--					<Button icon="sap-icon://delete" type="Transparent"/>-->
+						<!--				</Toolbar>-->
+						<!--			</Panel>-->
+						<!--			<Table id="idProductsTable" inset="false" items="{data>/sample}">-->
+						<!--				<headerToolbar>-->
+						<!--					<Toolbar>-->
+						<!--						<content>-->
+						<!--							<Title text="Employee Details" level="H2"/>-->
+						<!--							<ToolbarSpacer/>-->
+						<!--						</content>-->
+						<!--					</Toolbar>-->
+						<!--				</headerToolbar>-->
+						<!--				<columns>-->
+						<!--					<Column>-->
+						<!--						<Text text="Total"/>-->
+						<!--					</Column>-->
+						<!--					<Column>-->
+						<!--						<Text text="Activity hours"/>-->
+						<!--					</Column>-->
+						<!--					<Column>-->
+						<!--						<Text text="Quality"/>-->
+						<!--					</Column>-->
+						<!--					<Column>-->
+						<!--						<Text text="Should be PI"/>-->
+						<!--					</Column>-->
+						<!--					<Column>-->
+						<!--						<Text text="PI By CH"/>-->
+						<!--					</Column>-->
+						<!--					<Column>-->
+						<!--						<Text text="Edit"/>-->
+						<!--					</Column>-->
+						<!--					<Column>-->
+						<!--						<Text text="Delete"/>-->
+						<!--					</Column>-->
+						<!--				</columns>-->
+						<!--				<items>-->
+						<!--					<ColumnListItem>-->
+						<!--						<cells>-->
+						<!--							<Image src="{data>src}" width="40%" height="5%"/>-->
+						<!--							<Text text="{data>Activity hours}"/>-->
+						<!--							<Text text="{data>Quality}"/>-->
+						<!--							<Text text="{data>Should be PH}"/>-->
+						<!--							<Text text="{data>PI by CH}"/>-->
+						<!--							<Button icon="{data>icon1}" type="Transparent"/>-->
+						<!--							<Button icon="{data>icon2}" type="Transparent"/>-->
+						<!--						</cells>-->
+						<!--					</ColumnListItem>-->
+						<!--				</items>-->
+						<!--			</Table>-->
+						<!--		</IconTabFilter>-->
+						<!--		<IconTabFilter text="Activity 02">-->
+						<!--			<Text text="Attachments go here ..."/>-->
+						<!--		</IconTabFilter>-->
+						<!--		<IconTabFilter text="Activity 03">-->
+						<!--			<Text text="Notes go here ..."/>-->
+						<!--		</IconTabFilter>-->
+						<!--		<IconTabFilter text="Activity 04">-->
+						<!--			<Text text="People content goes here ..."/>-->
+						<!--		</IconTabFilter>-->
+						<!--	</items>-->
+						<!--</IconTabBar>-->
+					</content>
 				</content>
 				<footer>
 					<Toolbar>
